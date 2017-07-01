@@ -1,24 +1,17 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import store from './store';
-import logo from './logo.png';
-import title from './title.png';
 import './App.css';
-import EventList from './components/eventlist.jsx';
-import AddEvent from './components/addEvent.jsx';
+import Home from './pages/home.jsx';
+import NavBar from './components/navbar.jsx';
 
 export default (
-      <Provider store={store}>
-        <div className="App">
-          <img src={logo} className="App-logo" alt="logo" />
-          <img src={title} className="App-title-pic" alt="home" />
-          <div className="App-body">          
-            <AddEvent />
-            
-          </div>
-          <div>
-            <EventList />
-          </div>
-        </div>        
-      </Provider>
-    )
+  <Provider store={store}>
+    <div className="App">
+      <NavBar />
+      <div className="App-body">
+        {Home}
+      </div>
+    </div>
+  </Provider>
+)

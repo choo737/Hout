@@ -1,0 +1,21 @@
+.event-list {
+    margin-left: 10px;
+    width: 60%;
+}
+
+.event-buttons{
+    text-align: right;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.event-item {
+    margin: 2px 10px 2px 2px;
+    border: 1px;
+    border-color: black;
+    height: auto;
+}
+
+.event-item:hover{
+  background-color: #B8CBDE;
+}

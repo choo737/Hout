@@ -1,0 +1,6 @@
+.home-cover {
+    background-size: cover;
+    background-image: url('../images/beach-party.jpg');
+    width: 100%;
+    height: 100%;
+}

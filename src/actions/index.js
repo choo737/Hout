@@ -14,3 +14,19 @@ export const removeEvent = (id) => {
     id
   };
 };
+
+export const signIn = (username, password) => {
+  return {
+    type: 'SIGN_IN',
+    username,
+    password
+  };
+};
+
+export const signOut = (username, password) => {
+  return {
+    type: 'SIGN_OUT',
+    username,
+    password
+  };
+};

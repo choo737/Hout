@@ -1,7 +1,24 @@
 import React from 'react';
 import { removeEvent } from '../actions';
 import { connect } from 'react-redux';
-import { EventItem } from './eventItem.jsx'
+import '../css/eventlist.css';
+import { Button } from 'semantic-ui-react';
+
+const EventItem = ({ id, name, onClick }) => {
+    return (
+        <tr height="auto">
+            <td>
+                <div className="event-item">
+                    <h2>Event Name: {name}</h2>
+                    <p>Event ID: {id}</p>
+                    <div className="event-buttons">
+                    <Button onClick={onClick}>Delete</Button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    );
+}
 
 const mapStateToProps = (
     state
@@ -21,7 +38,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const eventList = ({ events, onEventClick}) => {
     return (
-        <ul>
+        <table className="event-list">
             {events.map(event =>
                 <EventItem
                 key={event.id}
@@ -29,7 +46,7 @@ const eventList = ({ events, onEventClick}) => {
                 onClick={() => onEventClick(event.id)}
                 />
             )}
-        </ul>
+        </table>
     );
 }
 export default connect(
