@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import { events } from './events.js';
 
 const reducers = combineReducers({
-  state: (state = {}) => state
+  events
 });
 
 export default reducers;
